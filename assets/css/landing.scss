@@ -24,13 +24,19 @@
 	}
 
 	blockquote {
-		margin-top: 3rem;
+		width: max-content;
+		margin-top: 8rem;
+		fontsize: 150%;
+		line-height: 2;
 	}
+	
 	blockquote > p {
 		font-style: italic; 
 	}
   
 	blockquote > .attribution {
+		width: 100%;
+		margin-top: 2rem;
 		font-variant: small-caps;
 		text-align: right;
 	}
