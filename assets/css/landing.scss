@@ -1,0 +1,37 @@
+---
+---
+@import 'base';
+
+.hero {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: hsl(240, 64%, 15%);
+  color: white;
+  
+  h1 > :first-child {
+		font-variant: small-caps;
+		font-size: 18pt;
+		letter-spacing: 2pt;
+		font-weight: 200;
+	}
+
+	h1 > :nth-child(2) {
+		font-size: 36pt;
+		letter-spacing: 8pt;
+		font-weight: 700;
+		line-height: 1ex;
+	}  
+  
+  blockquote {
+    margin-top: 3rem;
+  }
+  blockquote > p {
+    font-style: italic; 
+  }
+  
+  blockquote > .attribution {
+    font-variant: small-caps;
+    text-align: right;
+  }
+}
