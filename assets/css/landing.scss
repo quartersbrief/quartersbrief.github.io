@@ -4,9 +4,15 @@
 @import 'colors';
 
 .hero {
-	margin: 0;
-	padding: 0;
+	margin: 5rem 0;
+	padding: 5rem;
+	
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	// Add vertical space if flexbox has wrapped:
+	row-gap: 5rem;
+	
 	background-color: $background-dark;
 
 	h1 > :first-child {
@@ -23,18 +29,17 @@
 		line-height: 1ex;
 	}
 
-	blockquote {
-		width: max-content;
+	.quote {
+		width: fit-content;
 		margin-top: 8rem;
 		fontsize: 150%;
-		line-height: 2;
 	}
 	
-	blockquote > p {
+	.quote > p {
 		font-style: italic; 
 	}
   
-	blockquote > .attribution {
+	.quote > .attribution {
 		width: 100%;
 		margin-top: 2rem;
 		font-variant: small-caps;
