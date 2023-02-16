@@ -1,13 +1,13 @@
 ---
 ---
-@use 'base';
-@use 'colors';
+@import 'base';
+@import 'colors';
 
 .hero {
 	margin: 0;
 	padding: 0;
 	display: flex;
-	background-color: colors.$background-dark;
+	background-color: $background-dark;
 
 	h1 > :first-child {
 		font-variant: small-caps;
