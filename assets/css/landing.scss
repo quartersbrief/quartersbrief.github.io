@@ -11,20 +11,25 @@
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	// Add vertical space if flexbox has wrapped:
-	row-gap: 5rem;
+	row-gap: 8rem;
 	
 	background-color: $background-dark;
-
+	
+	h1 {
+		margin: 0;
+		line-height: 1;
+	}
+	
 	h1 > :first-child {
 		font-variant: small-caps;
-		font-size: 18pt;
-		letter-spacing: 2pt;
+		font-size: 30pt;
+		letter-spacing: 4pt;
 		font-weight: 200;
 	}
 
 	h1 > :nth-child(2) {
-		font-size: 36pt;
-		letter-spacing: 8pt;
+		font-size: 60pt;
+		letter-spacing: 13pt;
 		font-weight: 700;
 		line-height: 1ex;
 	}
@@ -32,7 +37,9 @@
 	.quote {
 		width: fit-content;
 		margin-top: 8rem;
-		fontsize: 150%;
+		
+		font-size: 150%;
+		letter-spacing: 0.01ch;
 	}
 	
 	.quote > p {
