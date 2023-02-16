@@ -1,15 +1,15 @@
 ---
 ---
 @import 'base';
+@import 'colors';
 
 .hero {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  background-color: hsl(240, 64%, 15%);
-  color: white;
-  
-  h1 > :first-child {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	background-color: colors.$background-dark;
+
+	h1 > :first-child {
 		font-variant: small-caps;
 		font-size: 18pt;
 		letter-spacing: 2pt;
@@ -21,17 +21,17 @@
 		letter-spacing: 8pt;
 		font-weight: 700;
 		line-height: 1ex;
-	}  
+	}
+
+	blockquote {
+		margin-top: 3rem;
+	}
+	blockquote > p {
+		font-style: italic; 
+	}
   
-  blockquote {
-    margin-top: 3rem;
-  }
-  blockquote > p {
-    font-style: italic; 
-  }
-  
-  blockquote > .attribution {
-    font-variant: small-caps;
-    text-align: right;
-  }
+	blockquote > .attribution {
+		font-variant: small-caps;
+		text-align: right;
+	}
 }
