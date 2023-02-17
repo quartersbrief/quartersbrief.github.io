@@ -75,6 +75,14 @@ a {
 
 	border: 2pt solid $text;
 	border-radius: 4pt;
+	
+	transition: all 333ms;
+	
+	&:focus,
+	&:hover {
+		box-shadow: 0 0 8pt white;
+		outline: none;
+	}		
 }
 
 .solid {
