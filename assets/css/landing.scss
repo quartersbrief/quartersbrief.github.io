@@ -18,6 +18,7 @@
 	h1 {
 		margin: 0;
 		line-height: 1;
+		font-style: italic;
 	}
 	
 	h1 > :first-child {
@@ -43,13 +44,13 @@
 	}
 	
 	.quote > p {
-		font-style: italic; 
+		max-width: 60ch; 
 	}
   
 	.quote > .attribution {
 		width: 100%;
 		margin-top: 2rem;
-		font-variant: small-caps;
+		font-style: italic;
 		text-align: right;
 	}
 }
