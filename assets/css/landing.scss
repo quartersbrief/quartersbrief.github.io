@@ -76,11 +76,12 @@ a {
 	border: 2pt solid $text;
 	border-radius: 4pt;
 	
-	transition: all 333ms;
+	transition: all 500ms;
 	
 	&:focus,
 	&:hover {
-		box-shadow: 0 0 8pt white;
+		color: $accent;
+		border-color: $accent;
 		outline: none;
 	}		
 }
@@ -88,4 +89,10 @@ a {
 .solid {
 	color: $background;
 	background-color: $text;
+	
+	&:focus,
+	&:hover {
+		color: $background;
+		background-color: $accent;
+	}
 }
