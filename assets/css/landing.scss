@@ -57,7 +57,7 @@
 
 .about {
 	margin: 8rem auto;
-	max-width: 60ch;
+	max-width: min(60ch, 80%);
 
 	font-size: 200%;
 	text-align: center;	
