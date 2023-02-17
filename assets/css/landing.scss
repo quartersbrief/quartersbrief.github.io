@@ -56,22 +56,25 @@
 }
 
 .about {
-	margin: 5rem auto;
+	margin: 8rem auto;
 	max-width: 60ch;
 
-	font-size: 150%;
+	font-size: 200%;
 	text-align: center;	
+}
 
-	a {
- 		display: inline-block;
-		width: 15ch;
-		margin: 1ex 1em;
-		padding: 1ex 1em;
+a {
+	cursor: pointer;
+}
 
-		border: 2pt solid $text;
-		border-radius: 4pt;
-		cursor: pointer;
-	}
+.button {
+	display: inline-block;
+	width: 15ch;
+	margin: 1.5em;
+	padding: 1ex 1em;
+
+	border: 2pt solid $text;
+	border-radius: 4pt;
 }
 
 .solid {
