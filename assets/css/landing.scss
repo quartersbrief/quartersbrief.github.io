@@ -54,3 +54,27 @@
 		text-align: right;
 	}
 }
+
+.about {
+	margin: 5rem auto;
+	max-width: 60ch;
+
+	font-size: 150%;
+	text-align: center;	
+
+	a {
+ 		display: inline-block;
+		width: 15ch;
+		margin: 1ex 1em;
+		padding: 1ex 1em;
+
+		border: 2pt solid $text;
+		border-radius: 4pt;
+		cursor: pointer;
+	}
+}
+
+.solid {
+	color: $background;
+	background-color: $text;
+}
