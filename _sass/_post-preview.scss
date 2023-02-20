@@ -1,13 +1,24 @@
+@import colors;
+@import base;
+
 a.post-preview {
 	text-decoration: inherit;
+	
+	.badge {
+		@extend .solid;
+	}
 	
 	&:visited {
 		// Do not style articles that have already been read differently
 		color: inherit;
 		
-		// Add a double checkmark before the date of read posts
-		& > .date::before {
-			content: '\2713';
+		// "Hide" the badge by setting both fore- and background color to the page's background color.
+		// We have to use this hack because the display property is not stylable in :visited pseudo-class
+		// for privacy reasons.
+		// See https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector
+		.badge {
+			color: $background;
+			background-color: $background;
 		}
 	}
 	
