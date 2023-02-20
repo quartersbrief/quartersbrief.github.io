@@ -1,5 +1,9 @@
-<img/>
-<div class="date">{{ post.date }}</div>
-<h3>{{ post.title }}</h3>
-<h4>{{ post.subtitle }}</h4>
-<p class="excerpt">{{ post.excerpt }}</p>
+<div class="post-preview">
+	<img/>
+	<div class="date">{{ post.date | date_to_long_string }}</div>
+	<h3>{{ post.title }}</h3>
+	<h4>{{ post.subtitle }}</h4>
+	<div class="excerpt">
+		{{ post.excerpt | markdownify }}
+	</div>
+</div>
