@@ -2,7 +2,10 @@ a.post-preview {
 	text-decoration: inherit;
 	
 	.badge {
-		@extend .solid;
+		color: $background;
+		background-color: $accent;
+		margin-left: 3em;
+		border-radius: 2pt;
 	}
 	
 	&:visited {
