@@ -1,8 +1,13 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-{% if page.subtitle %}
-	<h3>{{ page.subtitle }}</h3>
-{% endif %}
+<header>
+	<h2>{{ page.title }}</h2>
+	{% if page.subtitle %}
+		<h3>{{ page.subtitle }}</h3>
+	{% endif %}
+	<span class="date">Posted on 
+		<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
+	</span>
+</header>
 {{ content }}
