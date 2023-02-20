@@ -1,0 +1,13 @@
+	#branding > :first-child {
+		font-variant: small-caps;
+		font-size: 18pt;
+		letter-spacing: 2pt;
+		font-weight: 200;
+	}
+
+	#branding > :nth-child(2) {
+		font-size: 36pt;
+		letter-spacing: 8pt;
+		font-weight: 700;
+		line-height: 1ex;
+	}
