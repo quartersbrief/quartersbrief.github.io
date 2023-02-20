@@ -1,0 +1,21 @@
+a.post-preview {
+	text-decoration: inherit;
+	
+	&:visited {
+		// Do not style articles that have already been read differently
+		color: inherit;
+		
+		// Add a double checkmark before the date of read posts
+		& > .date::before {
+			content: '\2713';
+		}
+	}
+	
+	.date {
+	}
+	
+	h3, h4 {
+		margin: 0;
+	}
+	
+}
