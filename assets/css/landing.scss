@@ -12,6 +12,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
+	align-items: start;
 	// Add vertical space if flexbox has wrapped:
 	row-gap: 8rem;
 	
