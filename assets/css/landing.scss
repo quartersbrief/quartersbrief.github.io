@@ -17,6 +17,10 @@
 	
 	background-color: $background-dark;
 	
+	& > * {
+		max-width: 100%;
+	}
+	
 	#branding {
 		margin: 0;
 		line-height: 1;
