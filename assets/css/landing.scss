@@ -25,14 +25,14 @@
 	
 	#branding > :first-child {
 		font-size: clamp(18pt, 5vw, 30pt);
-		letter-spacing: clamp(2.4, 0.66vw, 4pt);
+		letter-spacing: clamp(2.4pt, 0.66vw, 4pt);
 		margin-top: -0.4ex;
 		overflow-wrap: normal;
 	}
 
 	#branding > :nth-child(2) {
 		font-size: clamp(36pt, 10vw, 60pt);
-		letter-spacing: clamp(7.8, 2.1vw, 13pt);
+		letter-spacing: clamp(7.8pt, 2.1vw, 13pt);
 	}
 
 	.quote {
