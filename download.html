@@ -10,15 +10,13 @@ layout: default
 	{% endfor %}
 </div>
 
-<div id="prereleases">
-	<h2>Get a pre-release</h2>
+<div id="prerelease">
+	<h2>Get the latest pre-release</h2>
 	<p>Be the first to get new features by installing a pre-release version. These versions may contain bugs or unfinished functionality.</p>
-	{% for release in site.github.releases | where: "prerelease" %}
-		<div class="release">
-			<div>{{ release.name }}</div>
-			{% for asset in release.assets %}
-				<a class="asset" href="{{ asset.browser_download_url }}">{{ asset.name }}</a>
-			{% endfor %}
+	{% assign prerelease = site.github.releases | where: "prerelease" | last %}
+	{% for asset in prerelease.assets %}
+		<div id="prerelease-{{ asset.name | split: "." | last }}" class="asset">
+			<a href="{{ asset.browser_download_url }}">{{ release.name }}</a>
 		</div>
 	{% endfor %}
 </div>
