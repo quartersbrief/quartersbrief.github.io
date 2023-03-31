@@ -5,7 +5,7 @@ layout: default
 	<h2>Download the latest stable release</h2>	
 	{% for asset in site.github_latest_release.assets %}
 		<div id="latest-{{ asset.name | split: "." | last }}">
-			<a href="{{ site.github.latest_release.browser_download_url }}">{{ site.github.latest_release.name }}</a>
+			<a href="{{ asset.browser_download_url }}">{{ site.github.latest_release.name }}</a>
 		</div>
 	{% endfor %}
 </div>
