@@ -2,15 +2,10 @@
 layout: default
 ---
 <div id="latest">
-	<h2>Download the latest stable release</h2>
-	<div id="latest-deb">
-		<a href="{{ site.github.latest_release.assets | find: "name contains .deb" }}">{{ site.github.latest_release.name }}</a>
-	</div>
-	<div id="latest-msi">
-		<a href="{{ site.github.latest_release.assets | find: "name contains .msi" }}">{{ site.github.latest_release.name }}</a>
-	</div>
+	<h2>Download the latest stable release</h2>	
+	{% for asset in site.github_latest_release.assets %}
+		<div id="latest-{{ asset.name | split: "." | last }}">
+			<a href="{{ site.github.latest_release.browser_download_url }}">{{ site.github.latest_release.name }}</a>
+		</div>
+	{% endfor %}
 </div>
-{% for release in site.github.releases %}
-  {{ repository }}
-{% endfor %}
-{{ site.github.latest_release }}
