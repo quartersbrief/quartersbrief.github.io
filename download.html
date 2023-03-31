@@ -13,7 +13,7 @@ layout: default
 <div id="prereleases">
 	<h2>Get a pre-release</h2>
 	<p>Be the first to get new features by installing a pre-release version. These versions may contain bugs or unfinished functionality.</p>
-	{% for release in site.github.releases | where "prerelease" %}
+	{% for release in site.github.releases | where: "prerelease" %}
 		<div class="release">
 			<div>{{ release.name }}</div>
 			{% for asset in release.assets %}
