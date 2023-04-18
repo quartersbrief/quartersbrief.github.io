@@ -2,3 +2,8 @@
 ---
 @import 'base';
 @import 'branding';
+
+main {
+    max-width: 60ch;
+    margin: 0 auto;
+}
