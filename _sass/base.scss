@@ -19,6 +19,11 @@ a {
 	cursor: pointer;
 }
 
+// Remove default colors for links
+:where(a, a:visited) {
+	color: inherit;
+}
+
 // Only style visited links inside paragraphs
 p a:visited {
 	color: lightsteelblue;
