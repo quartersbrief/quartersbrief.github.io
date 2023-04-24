@@ -28,3 +28,22 @@ a {
 p a:visited {
 	color: lightsteelblue;
 } 
+
+strong {
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 300%;
+	font-weight: bold;
+	line-height: 1.1;
+}
+
+h2 {
+	font-size: 150%;
+	font-weight: bold;
+	line-height: 1.25;
+
+	margin: 2.5em 0 1em;
+}
+
