@@ -65,12 +65,16 @@
 
 	font-size: 200%;
 	text-align: center;	
+
+	& > * {
+		margin: 1.5em 0;
+	}
 }
 
 .button {
 	display: inline-block;
 	width: 15ch;
-	margin: 1.5em;
+	margin: 0.5em 1em;
 	padding: 1ex 1em;
 
 	border: 2pt solid $text;
