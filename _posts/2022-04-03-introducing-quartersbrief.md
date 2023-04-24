@@ -24,5 +24,5 @@ Quartersbrief aims to provide you with that information _without_ requiring you 
 
 ### Great! How can I get it?
 
-Head over to the [downloads page](download.html) and follow the instructions there. Fair winds and following seas!
+Head over to the [downloads page](/download.html) and follow the instructions there. Fair winds and following seas!
 
