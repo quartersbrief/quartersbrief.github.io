@@ -76,7 +76,7 @@
 	border: 2pt solid $text;
 	border-radius: 4pt;
 	
-	transition: all 500ms;
+	transition: color 500ms, border-color 500ms;
 	
 	&:focus,
 	&:hover {
@@ -86,10 +86,12 @@
 	}		
 }
 
-.solid {
+.button.solid {
 	color: $background;
 	background-color: $text;
-	
+
+	transition: color 500ms, border-color 500ms, background-color 500ms;
+
 	&:focus,
 	&:hover {
 		color: $background;
