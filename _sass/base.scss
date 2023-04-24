@@ -15,6 +15,11 @@ body {
 	}
 }
 
-a:visited {
-	color: lightsteelblue;
+a {
+	cursor: pointer;
 }
+
+// Only style visited links inside paragraphs
+p a:visited {
+	color: lightsteelblue;
+} 
