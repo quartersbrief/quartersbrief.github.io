@@ -18,7 +18,7 @@ layout: default
 	<section id="prerelease">
 		<h2>Get the latest pre-release</h2>
 		<p>Be the first to get new features by installing a pre-release version. These versions may contain bugs or unfinished functionality.</p>
-		{% assign prerelease = site.github.releases | where: "prerelease", true | sort | last %}
+		{% assign prerelease = site.github.releases | where: "prerelease", true | sort: "tag_name" | last %}
 		{% for asset in prerelease.assets %}
 			<article id="prerelease-{{ asset.name | split: "." | last }}" class="asset">
 				<a href="{{ asset.browser_download_url }}">{{ prerelease.name }}</a>
