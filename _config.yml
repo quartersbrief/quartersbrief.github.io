@@ -2,5 +2,7 @@ url: "https://badideaexception.github.io"
 baseurl: "/quartersbrief"
 title: "quartersbrief"
 
+repository: BadIdeaException/quartersbrief
+
 plugins:
   - "jekyll-github-metadata"
