@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
-  <head>
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="{{ site.lang | default: "en-US" }}">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
 		<title>{{ site.title }}</title>
-    <link rel="stylesheet" href="https://unpkg.com/sanitize.css"/>
-    <link rel="stylesheet" href="assets/css/landing.css" >
-  </head>
-  <body>
-    {{ content }}
-  </body>
+		<link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+	</head>
+	<body>
+		{{ content }}
+	</body>
 </html>
