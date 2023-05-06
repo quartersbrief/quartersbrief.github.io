@@ -1,9 +1,9 @@
 ---
 ---
-@import 'base';
-@import 'post-preview';
-@import 'colors';
-@import 'branding';
+@use 'base';
+@use 'post-preview';
+@use 'colors';
+@use 'branding';
 
 .hero {
 	margin: 5rem 0;
@@ -16,7 +16,7 @@
 	// Add vertical space if flexbox has wrapped:
 	row-gap: 8rem;
 	
-	background-color: $background-dark;
+	background-color: colors.$background-dark;
 	
 	& > * {
 		max-width: 100%;
@@ -77,28 +77,28 @@
 	margin: 0.5em 1em;
 	padding: 1ex 1em;
 
-	border: 2pt solid $text;
+	border: 2pt solid colors.$text;
 	border-radius: 4pt;
 	
 	transition: color 500ms, border-color 500ms;
 	
 	&:focus,
 	&:hover {
-		color: $accent;
-		border-color: $accent;
+		color: colors.$accent;
+		border-color: colors.$accent;
 		outline: none;
 	}		
 }
 
 .button.solid {
-	color: $background;
-	background-color: $text;
+	color: colors.$background;
+	background-color: colors.$text;
 
 	transition: color 500ms, border-color 500ms, background-color 500ms;
 
 	&:focus,
 	&:hover {
-		color: $background;
-		background-color: $accent;
+		color: colors.$background;
+		background-color: colors.$accent;
 	}
 }

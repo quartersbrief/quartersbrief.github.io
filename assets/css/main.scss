@@ -1,7 +1,7 @@
 ---
 ---
-@import 'base';
-@import 'branding';
+@use 'base';
+@use 'branding';
 
 main {
     max-width: min(70ch, 90%);

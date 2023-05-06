@@ -1,9 +1,11 @@
+@use 'colors';
+
 a.post-preview {
 	text-decoration: inherit;
 	
 	.badge {
-		color: $background;
-		background-color: $accent;
+		color: colors.$background;
+		background-color: colors.$accent;
 		margin-left: 3em;
 		border-radius: 2pt;
 	}
@@ -17,8 +19,8 @@ a.post-preview {
 		// for privacy reasons.
 		// See https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector
 		.badge {
-			color: $background;
-			background-color: $background;
+			color: colors.$background;
+			background-color: colors.$background;
 		}
 	}
 	
