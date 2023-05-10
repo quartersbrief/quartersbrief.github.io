@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta charset="utf-8">
+		{% include html-head-common.html %}
+		<link rel="stylesheet" href="{{ "/assets/css/landing.css" | relative_url }}">
 		<title>{{ site.title }}</title>
-		<link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
-		<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
 	</head>
 	<body>
 		{{ content }}

@@ -3,11 +3,6 @@
 @use 'base';
 @use 'branding';
 
-main {
-    max-width: min(70ch, 90%);
-    margin: 0 auto;
-}
-
 .subtitle {
     @extend h2;
 }
