@@ -1,0 +1,108 @@
+---
+---
+@use 'base';
+@use 'colors';
+
+.version {
+	font-size: 110%;
+	font-weight: 500;
+}
+
+#latest {
+	time {
+		@extend .version;
+	}
+
+	.assets {
+		display: grid;
+		column-gap: 2em;
+		row-gap: 1em;
+
+		grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+	}
+
+	.asset {
+		border: 2pt solid colors.$text;
+
+		a { 
+			display: flex;
+			height: 100%;
+			padding: 1em;
+			text-decoration: none; 
+
+			align-items: center;
+			justify-content: left;
+			column-gap: 1rem;
+		}
+
+		$transition-time: 500ms;
+		transition: color $transition-time, border-color $transition-time;
+
+		i {
+			display: block;
+			font-size: clamp(1.5rem, 10vw, 3rem);
+		}
+
+		span {
+			margin: 0;
+			font-size: clamp(1rem, 5vw, 1.5rem);
+		}
+
+		&:hover,
+		&:focus {
+			color: colors.$accent;
+			border-color: colors.$accent;
+		}
+	}
+}
+
+#prerelease {
+	.prerelease {
+		margin: 1rem 0;
+		padding: 0.5ex;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: clamp(1rem, 15%, 5rem);
+		border: 1pt solid white;
+	}
+
+	.prerelease > div:first-child {		
+		flex: 1 0 max-content;
+
+		h3,
+		h3 + p {
+			display: inline-block;
+			margin: 0;
+		}
+		h3 + p {
+			font-size: 80%;
+		}
+		time {
+			font-weight: inherit;
+			font-size: inherit;
+		}
+	}
+
+	.assets {
+		flex: 1 0 auto;
+		display: flex;
+		column-gap: clamp(1rem, 5%, 5rem);
+		justify-content: left;
+	}
+
+	.asset {
+		white-space: nowrap;
+
+		a {
+			text-decoration: underline;			
+		}
+
+		i,
+		p {
+			display: inline-block;
+			text-decoration: inherit;
+		}
+	}
+}

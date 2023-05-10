@@ -1,32 +1,98 @@
 ---
-layout: default
+layout: download
 ---
-<main>
-	<h1>
-		Download quartersbrief
-	</h1>
-	
-	<section id="latest">
-		<h2>Download the latest stable release</h2>
+<h1>
+	Download quartersbrief
+</h1>
+
+<section id="latest">
+	<h2>Download the latest stable release</h2>
+	<p>Stable releases are extensively tested to ensure stability and reliability and can be used even for competitive gaming.</p>
+	<p>The latest stable release is
+		<span class="version">
+			{{ site.github.latest_release.name }}
+		</span>
+		released on
+		<time datetime="{{ site.github.latest_release.published_at }}">
+			{{ site.github.latest_release.published_at | date_to_long_string }}
+		</time>
+	</p>
+	<div class="assets">
 		{% for asset in site.github.latest_release.assets %}
-			<article id="latest-{{ asset.name | split: "." | last }}" class="asset">
-				<a href="{{ asset.browser_download_url }}">{{ site.github.latest_release.name }}</a>
+			{% assign ext= asset.name | split: "." | last %}
+			{% case ext %}
+			{% when "msi" %}
+				{% assign os = "windows" %}
+			{% when "deb" %}
+				{% assign os = "ubuntu" %}
+			{% endcase %}
+
+			<article id="latest-{{ ext }}" class="asset">
+				<a href="{{ asset.browser_download_url }}">
+					<i class="fa-brands fa-{{ os }}"></i>
+					<span>
+						For 
+						{% case os %}
+						{% when "windows" %}
+							Microsoft Windows
+						{% when "ubuntu" %}
+							Ubuntu
+						{% endcase %}
+					</span>
+				</a>
 			</article>
 		{% endfor %}
-	</section>
-	
-	<section id="prerelease">
-		<h2>Get the latest pre-release</h2>
-		<p>Be the first to get new features by installing a pre-release version. These versions may contain bugs or unfinished functionality.</p>
-		{% assign prerelease = site.github.releases | where: "prerelease", true | sort: "tag_name" | last %}
-		{% for asset in prerelease.assets %}
-			<article id="prerelease-{{ asset.name | split: "." | last }}" class="asset">
-				<a href="{{ asset.browser_download_url }}">{{ prerelease.name }}</a>
-			</article>
-		{% endfor %}
-	</section>
-	
-	<section id="others">
-		<a href="https://github.com/BadIdeaException/quartersbrief/releases">Get an older release</a>
-	</section>
-</main>
+	</div>
+</section>
+
+<section id="prerelease">
+	<h2>Download a pre-release</h2>
+	<p>Be the first to get new features by installing a pre-release version. These versions may still contain bugs or unfinished functionality.</p>
+	{% assign prereleases = site.github.releases | where: "prerelease", true 
+								| where_exp: "release", "release.tag_name > site.github.latest_release.tag_name" 
+								| sort: "tag_name" 
+								| slice: -3, 3 
+								| reverse %}
+	{% for prerelease in prereleases %}
+		<article class="prerelease">
+			<div>
+				<h3 class="version">{{ prerelease.tag_name }}</h3>
+				<p>released
+					<time datetime="{{ prerelease.published_at }}">{{ prerelease.published_at | date_to_string }}</time>
+				</p>
+			</div>
+			<div class="assets">
+				{% for asset in prerelease.assets %}
+					{% assign ext= asset.name | split: "." | last %}
+					{% case ext %}
+					{% when "msi" %}
+						{% assign os = "windows" %}
+					{% when "deb" %}
+						{% assign os = "ubuntu" %}
+					{% endcase %}
+					<article class="asset">
+						<a href="{{ asset.browser_download_url }}">
+							<i class="fa-brands fa-{{ os }}"></i>
+							<span>
+								For
+								{% case os %}
+								{% when "windows" %}
+									Microsoft Windows
+								{% when "ubuntu" %}
+									Ubuntu
+								{% endcase %}
+							</span>
+						</a>
+					</article>
+				{% endfor %}
+			</div>
+		</article>
+	{% endfor %}
+</section>
+
+<section id="others">
+	<h2>Download an older release</h2>
+	<p>You can download other releases directly from the 
+		<a href="https://github.com/BadIdeaException/quartersbrief/releases">releases page</a>.
+	</p>
+</section>
