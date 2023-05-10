@@ -44,7 +44,7 @@ Vagrant.configure("2") do |config|
   # Install convenience script so we can just serve with "serve" instead of having to "bundle exec jekyll serve --host"
   config.vm.provision "shell", name: "Install convenience script", inline: <<-SHELL
     mkdir -p /home/vagrant/.local/bin
-    echo 'bundle exec jekyll serve --host 0.0.0.0 $@' > /home/vagrant/.local/bin/serve  && chmod +x /home/vagrant/.local/bin/serve
+    echo 'bundle exec jekyll serve --host 0.0.0.0 --incremental --watch --force_polling $@' > /home/vagrant/.local/bin/serve  && chmod +x /home/vagrant/.local/bin/serve
   SHELL
 
   # Use SSH forwarding to allow git to use the host's private key from inside the VM
