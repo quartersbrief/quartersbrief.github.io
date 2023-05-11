@@ -1,5 +1,7 @@
 url: "https://quartersbrief.github.io"
 title: "quartersbrief"
+# baseurl must be empty instead of just omitting it; see https://github.com/github/pages-gem/issues/359
+baseurl: '' 
 
 repository: BadIdeaException/quartersbrief
 
