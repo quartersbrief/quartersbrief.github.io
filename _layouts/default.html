@@ -3,6 +3,12 @@
 	<head>
 		{% include html-head-common.html %}
 		<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+		{% if layout.stylesheet %}
+			<link rel="stylesheet" href="{{ layout.stylesheet | prepend: "/assets/css/" | relative_url }}">
+		{% endif %}
+		{% if page.stylesheet %}
+			<link rel="stylesheet" href="{{ page.stylesheet | prepend: "/assets/css/" | relative_url }}">
+		{% endif %}
 	</head>
 	<body>
 		{% include header.html %}
