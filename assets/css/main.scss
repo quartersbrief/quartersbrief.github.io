@@ -3,6 +3,24 @@
 @use 'base';
 @use 'branding';
 
+body {
+    // Quartersbrief logo as watermark
+    position: relative;
+    &::before {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+
+        background-image: url({{ "/assets/img/logo.svg" | relative_url }});
+        background-position: center;
+        background-size: min(80%, 30rem);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+
+        opacity: 12%;
+    }
+}
+
 .subtitle {
     @extend h2;
 }

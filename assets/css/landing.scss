@@ -7,6 +7,7 @@
 
 // Override some default layout settings
 main { max-width: unset; }
+body::before { display: none }
 header:has(nav) { display: none; }
 
 main > :not(.hero) {
