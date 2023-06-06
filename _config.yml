@@ -7,3 +7,13 @@ repository: BadIdeaException/quartersbrief
 
 plugins:
   - "jekyll-github-metadata"
+
+include:
+  - _pages
+
+defaults:
+  -
+    scope:
+      path: "_pages"
+    values:
+      permalink: "/:title:output_ext"
