@@ -6,19 +6,21 @@
 // Quartersbrief logo as watermark
 body {
     position: relative;
-}
-body::before {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
+    &::before {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
 
-    background-image: url("{{ "/assets/img/logo.svg" | relative_url }}");
-    background-position: center;
-    background-size: min(80%, 30rem);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+        background-image: url("{{ "/assets/img/logo.svg" | relative_url }}");
+        background-position: center;
+        background-size: min(80%, 30rem);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
 
-    opacity: 12%;
+        opacity: 12%;
+
+        content: '';
+    }
 }
 
 .subtitle {
