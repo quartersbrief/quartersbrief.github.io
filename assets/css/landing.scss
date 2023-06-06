@@ -11,7 +11,7 @@ header:has(nav) { display: none; }
 
 main > :not(.hero) {
 	margin: 8rem auto;
-	max-width: min(60ch, 80%);
+	max-width: min(60rem, 90%);
 }
 
 .hero {
