@@ -5,6 +5,15 @@
 @use 'colors';
 @use 'branding';
 
+// Override some default layout settings
+main { max-width: unset; }
+header:has(nav) { display: none; }
+
+main > :not(.hero) {
+	margin: 8rem auto;
+	max-width: min(60ch, 80%);
+}
+
 .hero {
 	margin: 5rem 0;
 	padding: 5rem;
@@ -60,9 +69,6 @@
 }
 
 .about {
-	margin: 8rem auto;
-	max-width: min(60ch, 80%);
-
 	font-size: 150%;
 	text-align: center;	
 
