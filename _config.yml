@@ -3,7 +3,7 @@ title: "quartersbrief"
 # baseurl must be empty instead of just omitting it; see https://github.com/github/pages-gem/issues/359
 baseurl: '' 
 
-repository: BadIdeaException/quartersbrief
+repository: quartersbrief/quartersbrief
 
 plugins:
   - "jekyll-github-metadata"
@@ -16,4 +16,4 @@ defaults:
     scope:
       path: "_pages"
     values:
-      permalink: "/:title:output_ext"
+      permalink: "/:basename:output_ext"
