@@ -17,7 +17,7 @@ main > :not(.hero) {
 
 .hero {
 	margin: 5rem 0;
-	padding: 5rem;
+	padding: min(5rem, 5%);
 	
 	display: flex;
 	flex-wrap: wrap;
@@ -35,30 +35,16 @@ main > :not(.hero) {
 	}
 	
 	#logo {
-		width: min(85%, 20rem);
+		width: min(50%, 18rem);
 	}
 
-	#branding {
-		margin: 0;
-		line-height: 1;
-		font-style: italic;
+	#logotype {
+		width: min(100%, 40rem);
 	}
 	
-	#branding > :first-child {
-		font-size: clamp(18pt, 5vw, 30pt);
-		letter-spacing: clamp(2.4pt, 0.66vw, 4pt);
-		margin-top: -0.4ex;
-		overflow-wrap: normal;
-	}
-
-	#branding > :nth-child(2) {
-		font-size: clamp(36pt, 10vw, 60pt);
-		letter-spacing: clamp(7.8pt, 2.1vw, 13pt);
-	}
-
 	.quote {
 		width: fit-content;
-		margin-top: 8rem;
+		margin-top: 5rem;
 		
 		font-size: 125%;
 	}
