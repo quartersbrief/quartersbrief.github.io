@@ -3,7 +3,6 @@ layout: post
 title: Controlling the agenda
 subtitle: How to make sure you get the information you need
 ---
-
 Not all information is equal, and if quartersbrief just showed you everything it could for every battle, you would quickly become overwhelmed with information, unable to find what you really need, and generally no better off than before. Quartersbrief recognizes this and offers a powerful mechanism to adjust briefing content based on the ship you are sailing: agendas.
 
 Agendas are little text files that consist of two basic building blocks: a matches section and a topics section. The matches section describes what battles the briefing is eligible for. The topics section lists and configures the topics that will be part of the briefing.
