@@ -1,0 +1,37 @@
+nav {
+	height: 4rem;
+	padding: 2pt;
+	display: flex;
+	justify-content: space-between;	
+}
+
+#branding {
+	display: inline-block;	
+	height: 100%;
+
+	& > img {
+		height: 100%;
+	}
+
+	& > img[src$="logo.svg"] {
+		// Align the logo bottom edge with the baseline
+		vertical-align: baseline;
+	}
+
+	& > img[src$="logotype.svg"] {
+		// Align the bottom edge of "quartersbrief" with the bottom edge of the box
+		vertical-align: bottom;
+		margin-left: 0.5rem;
+	}
+}
+
+nav > ul {
+	display: inline-flex;
+	margin: 0;
+
+	align-items: end;
+	column-gap: 1rem;
+
+	font-size: 2rem;
+	font-weight: 500;
+}

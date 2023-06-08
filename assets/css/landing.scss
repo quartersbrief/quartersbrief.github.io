@@ -3,7 +3,7 @@
 @use 'base';
 @use 'post-preview';
 @use 'colors';
-@use 'branding';
+@use 'header';
 
 // Override some default layout settings
 main { max-width: unset; }
