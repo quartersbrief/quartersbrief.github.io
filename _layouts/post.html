@@ -6,7 +6,7 @@ layout: default
 	{% if page.subtitle %}
 		<p class="subtitle">{{ page.subtitle }}</p>
 	{% endif %}
-	<p class="date">Posted on 
+	<p class="secondary">Posted on 
 		<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
 	</p>
 </header>

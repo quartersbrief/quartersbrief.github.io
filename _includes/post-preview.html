@@ -1,12 +1,14 @@
-<a class="post-preview" href="{{ post.url | relative_url }}">
-	<img/>
-	<span class="date">{{ post.date | date_to_long_string }}</span>
-	<span class="badge" aria-hidden="true">unread</span>
-	<h3>{{ post.title }}</h3>
-	{% if post.subtitle %}
-		<h4>{{ post.subtitle }}</h4>
-	{% endif %}
-	<div class="excerpt">
-		{{ post.excerpt | markdownify }}
-	</div>
-</a>
+<article>
+	<a class="post-preview" href="{{ post.url | relative_url }}">
+		<img/>
+		<span class="secondary">{{ post.date | date_to_long_string }}</span>
+		<span class="badge" aria-hidden="true">unread</span>
+		<h3>{{ post.title }}</h3>
+		{% if post.subtitle %}
+			<p class="subtitle">{{ post.subtitle }}</p>
+		{% endif %}
+		<div class="excerpt">
+			{{ post.excerpt | markdownify }}
+		</div>
+	</a>
+</article>
