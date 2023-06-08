@@ -8,6 +8,7 @@ nav {
 #branding {
 	display: inline-block;	
 	height: 100%;
+	text-decoration: none;
 
 	& > img {
 		height: 100%;
@@ -34,4 +35,10 @@ nav > ul {
 
 	font-size: 2rem;
 	font-weight: 500;
+}
+
+nav li {
+	&.current {
+		text-decoration: underline;
+	}
 }
