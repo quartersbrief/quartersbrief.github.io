@@ -1,23 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta charset="utf-8">
-		<title>{{ page.title }} - {{ site.title }}</title>
-		<link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
-		<script src="https://kit.fontawesome.com/d1770ffbe4.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-		{% if layout.stylesheet %}
-			<link rel="stylesheet" href="{{ layout.stylesheet | prepend: "/assets/css/" | relative_url }}">
-		{% endif %}
-		{% if page.stylesheet %}
-			<link rel="stylesheet" href="{{ page.stylesheet | prepend: "/assets/css/" | relative_url }}">
-		{% endif %}
-	</head>
-	<body>
-		{% include header.html %}
-		<main>
-			{{ content }}
-		</main>
-	</body>
-</html>
+---
+layout: base
+---
+{% include header.html %}
+<main>
+	{{ content }}
+</main>
