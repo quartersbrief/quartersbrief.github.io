@@ -6,7 +6,8 @@ baseurl: ''
 repository: quartersbrief/quartersbrief
 
 plugins:
-  - "jekyll-github-metadata"
+  - jekyll-github-metadata
+  - jekyll-redirect-from
 
 include:
   - _pages

@@ -1,8 +1,9 @@
 ---
 layout: post
-permalink: /introduction/
 title: What is quartersbrief?
 subtitle: Meet your new right hand when playing World of Warships
+redirect_from:
+- introduction.html
 ---
 Quartersbrief displays information about the ships in your battle, giving you the edge you need for victory. 
 
