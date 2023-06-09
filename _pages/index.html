@@ -3,26 +3,26 @@ layout: base
 stylesheet: landing.css
 ---
 
-<div class="hero">
+<section class="hero">
 	<img id="logo" src="{{ "/assets/img/logo.svg" | relative_url }}"/>
 	<div>
 		<img id="logotype" src="{{ "/assets/img/logotype.svg" | relative_url }}"/>
 		<div class="quote">
 			<p>If you know the enemy and know yourself, you need not fear the result of a hundred battles.</p>
-			<div class="attribution">Sun Tsu, The Art of War</div>
+			<p class="attribution">Sun Tsu, The Art of War</p>
 		</div>
 	</div>
-</div>
+</section>
 
-<div class="about">
+<section class="about">
 	<p>Quartersbrief displays tailored information about the ships in your battle, giving you the edge you need for victory.</p>
 	<div>
-		<a class="button" tabindex="0" href="learn-more.html">Learn more</a>
+		<a class="button" tabindex="0" href="introduction.html">Learn more</a>
 		<a class="button solid" tabindex="0" href="download.html">Download</a>
 	</div>
-</div>
+</section>
 
-<div class="posts">
+<section class="posts">
 	<h2>Blog</h2>
 	<ul>
 		{% for post in site.posts %}
@@ -31,4 +31,4 @@ stylesheet: landing.css
 			</li>
 		{% endfor %}
 	</ul>
-</div>
+</section>
