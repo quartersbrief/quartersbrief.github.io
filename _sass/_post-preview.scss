@@ -1,6 +1,7 @@
 @use 'colors';
 
 a.post-preview {
+	display: block;
 	text-decoration: inherit;
 	
 	.badge {
@@ -24,8 +25,13 @@ a.post-preview {
 		}
 	}
 		
-	h3, h4 {
+	h3 {
 		margin: 0;
+		font-size: 150%;
 	}
 	
+	.subtitle {
+		margin: 0.5rem 0;
+		font-size: 100%
+	}
 }
