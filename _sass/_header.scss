@@ -12,6 +12,7 @@
 
 	& > img {
 		height: 100%;
+		filter: unquote('invert()');
 	}
 
 	& > img[src$="logo.svg"] {

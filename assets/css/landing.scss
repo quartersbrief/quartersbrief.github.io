@@ -34,6 +34,11 @@ main > :not(.hero) {
 	& > * {
 		max-width: 100%;
 	}
+
+	#logo,
+	#logotype {
+		filter: unquote('invert()');
+	}
 	
 	#logo {
 		width: min(50%, 18rem);
