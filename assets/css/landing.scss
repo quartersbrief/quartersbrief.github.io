@@ -80,7 +80,7 @@ main > :not(.hero) {
 	border: 2pt solid colors.$text;
 	border-radius: 4pt;
 	
-	@include highlightable;
+	@include mixins.highlightable;
 }
 
 .button.solid {
