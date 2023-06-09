@@ -6,9 +6,15 @@ $transition-time: 500ms;
     transition: color $transition-time, border-color $transition-time;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:focus-within {
         outline: none;
         color: colors.$accent;
         border-color: colors.$accent;
+    }
+
+    // Deactivate outline for the contained focused element
+    & :focus {
+        outline: none;
     }
 }
