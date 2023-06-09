@@ -57,3 +57,8 @@ h2 {
 	font-size: 80%;
 	color: colors.$minor;
 }
+
+:focus {
+    outline: 1.5pt solid colors.$accent;
+    outline-offset: 1pt;
+}
