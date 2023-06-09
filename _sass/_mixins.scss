@@ -1,0 +1,14 @@
+@use 'colors';
+
+$transition-time: 500ms;
+
+@mixin highlightable {
+    transition: color $transition-time, border-color $transition-time;
+
+    &:hover,
+    &:focus {
+        outline: none;
+        color: colors.$accent;
+        border-color: colors.$accent;
+    }
+}

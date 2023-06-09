@@ -3,7 +3,9 @@
 @use 'base';
 @use 'post-preview';
 @use 'colors';
+@use 'mixins';
 @use 'header';
+
 
 // Override some default layout settings
 main { max-width: unset; }
@@ -78,14 +80,7 @@ main > :not(.hero) {
 	border: 2pt solid colors.$text;
 	border-radius: 4pt;
 	
-	transition: color 500ms, border-color 500ms;
-	
-	&:focus,
-	&:hover {
-		color: colors.$accent;
-		border-color: colors.$accent;
-		outline: none;
-	}		
+	@include highlightable;
 }
 
 .button.solid {
