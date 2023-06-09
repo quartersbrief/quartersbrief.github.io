@@ -58,7 +58,8 @@ h2 {
 	color: colors.$minor;
 }
 
-:focus {
+// Use focus-visible instead of focus here to avoid drawing outline on every click
+:focus-visible {
     outline: 1.5pt solid colors.$accent;
     outline-offset: 1pt;
 }
