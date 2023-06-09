@@ -8,7 +8,9 @@ repository: quartersbrief/quartersbrief
 plugins:
   - jekyll-github-metadata
   - jekyll-redirect-from
-
+  - jekyll-feed
+  - jekyll-sitemap
+  
 include:
   - _pages
 
