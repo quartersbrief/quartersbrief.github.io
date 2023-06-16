@@ -25,7 +25,8 @@ stylesheet: landing.css
 	<section class="posts">
 		<h2><a href="{{ "/blog" | relative_url }}">Blog</a></h2>
 		<ul>
-			{% for post in site.posts %}
+			{% assign posts = site.posts | slice: 0, 3 %}
+			{% for post in posts %}
 				<li>
 					{% include post-preview.html %}
 				</li>
