@@ -44,7 +44,10 @@
 	font-weight: 500;
 }
 
-#navbar li {
+#navbar li {	
+	a { 
+		text-decoration: inherit; 
+	}
 	&.current {
 		text-decoration: underline;
 	}

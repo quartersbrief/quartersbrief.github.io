@@ -4,9 +4,13 @@
 			<img src="{{ "/assets/img/logo.svg" | relative_url }}" alt="The quartersbrief logo"/>
 			<img src="{{ "/assets/img/logotype.svg" | relative_url }}" alt="World of Warships quartersbrief"/>
 		</a>
-	
+
 		<ul>
-			<li><a>Blog</a></li>
+			{% for tgt in site.data.nav %}
+				<li {% if page.url contains tgt.url %}class="current"{% endif %}>
+					<a href="{{ tgt.url | relative_url }}">{{ tgt.title }}</a>
+				</li>
+			{% endfor %}
 		</ul>
 	</nav>
 </header>
