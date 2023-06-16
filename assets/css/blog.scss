@@ -5,7 +5,7 @@
 
 nav[aria-label="pagination"] {
 	margin: 3rem 0 0;
-	
+
 	ul {
 		display: flex;
 		justify-content: space-around;
@@ -23,7 +23,7 @@ nav[aria-label="pagination"] {
 		text-decoration: none;
 	}
 
-	.selected {
+	.current {
 		background-color: colors.$text;
 		color: colors.$background;
 	}

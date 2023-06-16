@@ -30,7 +30,7 @@ stylesheet: blog.css
 				</li>
 			{% endif %}
 			{% for trail in paginator.page_trail %}
-				<li {% if page.url == trail.path %}class="selected"{% endif %}>
+				<li {% if page.url == trail.path %}class="current"{% endif %}>
 					<a href="{{ trail.path | relative_url}}" title="{{ trail.title }}">{{ trail.num }}</a>
 				</li>
 			{% endfor %}
