@@ -20,6 +20,14 @@ pagination:
 include:
   - _pages
 
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Vagrantfile
+  - quartersbrief.github.io.sublime-project
+  - quartersbrief.github.io.sublime-workspace
+  - .gitignore
+
 defaults:
   -
     scope:
