@@ -23,7 +23,7 @@ stylesheet: landing.css
 	</section>
 
 	<section class="posts">
-		<h2>Blog</h2>
+		<h2><a href="{{ "/blog" | relative_url }}">Blog</a></h2>
 		<ul>
 			{% for post in site.posts %}
 				<li>
@@ -31,5 +31,6 @@ stylesheet: landing.css
 				</li>
 			{% endfor %}
 		</ul>
+		<a href="{{ "/blog" | relative_url }}">See more posts</a>
 	</section>
 </main>
