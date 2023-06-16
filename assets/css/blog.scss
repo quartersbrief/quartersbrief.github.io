@@ -1,0 +1,30 @@
+---
+---
+@use 'post-preview';
+@use 'colors';
+
+nav[aria-label="pagination"] {
+	margin: 3rem 0 0;
+	
+	ul {
+		display: flex;
+		justify-content: space-around;
+		width: fit-content;
+		margin: 0 auto;
+		gap: 2em;
+	}
+
+	li {
+		padding: 2pt 1em;
+		border-radius: 2pt;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.selected {
+		background-color: colors.$text;
+		color: colors.$background;
+	}
+}

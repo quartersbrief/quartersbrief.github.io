@@ -1,0 +1,47 @@
+---
+layout: default
+permalink: /blog
+pagination: 
+  enabled: true
+  trail:
+    before: 2
+    after: 2
+stylesheet: blog.css
+---
+<h1>Blog</h1>
+
+<ul>
+	{% for post in paginator.posts %}
+		<li>
+			{% include post-preview.html %}
+		</li>
+	{% endfor %}
+</ul>
+
+<nav aria-label="pagination">
+	<ul>
+		{% if paginator.page_trail %}
+			<li>
+				<a href="{{ paginator.first_page_path | relative_url }}">&laquo;</a>
+			</li>
+			{% if paginator.previous_page %}
+				<li>
+					<a href="{{ paginator.previous_page_path | relative_url }}">&lsaquo;</a>
+				</li>
+			{% endif %}
+			{% for trail in paginator.page_trail %}
+				<li {% if page.url == trail.path %}class="selected"{% endif %}>
+					<a href="{{ trail.path | relative_url}}" title="{{ trail.title }}">{{ trail.num }}</a>
+				</li>
+			{% endfor %}
+		{% endif %}
+			{% if paginator.next_page %}
+				<li>
+					<a href="{{ paginator.next_page_path | relative_url }}">&rsaquo;</a>
+				</li>
+			{% endif %}
+			<li>
+				<a href="{{ paginator.last_page_path | relative_url }}">&raquo;</a>
+			</li>
+	</ul>
+</nav>
