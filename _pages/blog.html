@@ -10,7 +10,7 @@ stylesheet: blog.css
 ---
 <h1>Blog</h1>
 
-<ul>
+<ul id="posts">
 	{% for post in paginator.posts %}
 		<li>
 			{% include post-preview.html %}

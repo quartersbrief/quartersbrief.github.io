@@ -76,6 +76,24 @@ main > :not(.hero) {
 	}
 }
 
+.posts {
+	// Remove underline from section heading link
+	h2 > a {
+		text-decoration: inherit;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	li {
+		margin: 3rem auto;
+		padding-left: 3rem;
+		border-left: 0.5ch solid colors.$text;		
+	}
+}
+
 .button {
 	display: inline-block;
 	width: 15ch;
