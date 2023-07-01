@@ -5,12 +5,16 @@
 			<img src="{{ "/assets/img/logotype.svg" | relative_url }}" alt="World of Warships quartersbrief"/>
 		</a>
 
-		<ul>
-			{% for tgt in site.data.nav %}
-				<li {% if page.url contains tgt.url %}class="current"{% endif %}>
-					<a href="{{ tgt.url | relative_url }}">{{ tgt.title }}</a>
-				</li>
-			{% endfor %}
-		</ul>
+		<div id="menu">
+			<input id="hamburger" type="checkbox"/>
+			<label for="hamburger"></label>
+			<menu>
+				{% for tgt in site.data.nav %}
+					<li {% if page.url contains tgt.url %}class="current"{% endif %}>
+						<a href="{{ tgt.url | relative_url }}">{{ tgt.title }}</a>
+					</li>
+				{% endfor %}
+			</menu>
+		</div>
 	</nav>
 </header>
