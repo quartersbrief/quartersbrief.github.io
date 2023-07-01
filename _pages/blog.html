@@ -10,6 +10,12 @@ stylesheet: blog.css
 ---
 <h1>Blog</h1>
 
+<div>
+	<p>Articles and announcements surrounding quartersbrief.</p>
+
+	<p>Stay up to the latest and <a href="{{ "/feed.xml" | relative_url }}">subscribe via RSS</a></p>
+</div>
+
 <ul id="posts">
 	{% for post in paginator.posts %}
 		<li>
@@ -34,7 +40,6 @@ stylesheet: blog.css
 					<a href="{{ trail.path | relative_url}}" title="{{ trail.title }}">{{ trail.num }}</a>
 				</li>
 			{% endfor %}
-		{% endif %}
 			{% if paginator.next_page %}
 				<li>
 					<a href="{{ paginator.next_page_path | relative_url }}">&rsaquo;</a>
@@ -43,5 +48,6 @@ stylesheet: blog.css
 			<li>
 				<a href="{{ paginator.last_page_path | relative_url }}">&raquo;</a>
 			</li>
+		{% endif %}
 	</ul>
 </nav>
