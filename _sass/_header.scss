@@ -111,3 +111,26 @@
 		}
 	}
 }
+
+@media (width > 800px) {
+	#menu {
+		display: contents;
+	
+		input,
+		label {
+			display: none;
+		}
+
+		menu {
+			position: static;
+			visibility: visible;
+
+			translate: 0;
+
+			flex-direction: row;
+			column-gap: 1rem;
+
+			font-size: 200%;
+		}
+	}
+}
