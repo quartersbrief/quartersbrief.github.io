@@ -11,6 +11,10 @@ body > header {
 	justify-content: space-between;	
 
 	// Prevent right-shifted menu from causing scrollbars
+	// Need to use "clip" because "hidden" causes the menu to be clipped 
+	// in the y-direction at the navbar border (even though we are specifically
+	// specifying overflow-x. Possibly because "hidden" establishes a new block
+	// formatting context, while "clip" doesn't.)
 	overflow-x: clip;
 }
 
@@ -126,7 +130,7 @@ body > header {
 
 @media (width > 800px) {
 	#menu {
-		display: contents;
+		display: block;
 	
 		input,
 		label {
