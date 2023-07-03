@@ -58,17 +58,22 @@ body > header {
 
 	label[for="hamburger"]::before {
 		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		content: '=';
+		inset: 0px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		font: var(--fa-font-solid);
+		font-size: 150%;
+		content: '\f0c9'; // Hamburger bars
+
 		transition: color $transition-time, background-color $transition-time;
 	}
 	
 	#hamburger:checked {
 		& + label[for="hamburger"]::before {
-			content: 'X';
+			content: '\f00d';
 			background-color: colors.$text;
 			color: colors.$background;			
 		}
