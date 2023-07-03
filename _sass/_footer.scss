@@ -10,8 +10,29 @@ footer {
 	}
 
 	ul {
-		list-style: none;
 		display: flex;
 		justify-content: space-evenly;
-	}
+
+		li {
+			padding-left: 1ch;
+		}
+
+		li::marker {
+			display: inline-block;
+			font-size: 80% !important; // Prevent the font: var(--fa-font-...) from overriding
+		}
+
+		li.legal::marker {
+			font: var(--fa-font-solid);
+			content: '\e447';
+		}
+		li.feed::marker {
+			font: var(--fa-font-solid);
+			content: '\f09e';
+		}
+		li.github::marker {
+			font: var(--fa-font-brands);
+			content: '\f09b';
+		}
+	}	
 }
