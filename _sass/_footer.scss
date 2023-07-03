@@ -1,0 +1,17 @@
+@use 'colors';
+
+footer {
+	background-color: colors.$background-dark;
+	font-size: 75%;
+	padding: 1em;
+
+	p {
+		text-align: center;
+	}
+
+	ul {
+		list-style: none;
+		display: flex;
+		justify-content: space-evenly;
+	}
+}
