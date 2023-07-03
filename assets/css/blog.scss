@@ -3,6 +3,11 @@
 @use 'post-preview';
 @use 'colors';
 
+i.fa-rss {
+	font-size: 66%;
+	// padding-right: 0.25ch;
+}
+
 nav[aria-label="pagination"] {
 	margin: 3rem 0 0;
 
