@@ -9,6 +9,9 @@ body > header {
 	padding: 2pt;
 	display: flex;
 	justify-content: space-between;	
+
+	// Prevent right-shifted menu from causing scrollbars
+	overflow-x: clip;
 }
 
 #branding {
@@ -47,8 +50,6 @@ body > header {
 	margin: 0.5rem;
 	aspect-ratio: 1;
 	position: relative;
-	// Prevent right-shifted menu from causing scrollbars
-	overflow-x: hidden;
 
 	// Checkbox hack: Make the actual checkbox invisible, and style the label to take up
 	// all the space.
