@@ -1,6 +1,8 @@
 @use 'colors';
 
-footer {
+body > footer {
+	margin-top: 12rem;
+
 	background-color: colors.$background-dark;
 	font-size: 75%;
 	padding: 1em;
