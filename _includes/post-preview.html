@@ -3,12 +3,12 @@
 		<img/>
 		<span class="secondary">{{ post.date | date_to_long_string }}</span>
 		<span class="badge" aria-hidden="true">unread</span>
-		<h3>{{ post.title }}</h3>
+		<h3>{{ post.title | strip_html }}</h3>
 		{% if post.subtitle %}
-			<p class="subtitle">{{ post.subtitle }}</p>
+			<p class="subtitle">{{ post.subtitle | strip_html }}</p>
 		{% endif %}
 		<div class="excerpt">
-			{{ post.excerpt | markdownify }}
+			{{ post.excerpt | strip_html }}
 		</div>
 	</a>
 </article>
