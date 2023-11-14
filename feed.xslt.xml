@@ -1,0 +1,28 @@
+---
+---
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<html>
+	<head>
+		<title><xsl:value-of select="rss/channel/title"/>{{ site.title }}</title>
+		<style type="text/css">
+			@import url({{ "assets/css/main.css" | relative_url }});
+		</style>
+	</head>
+	<body>
+		{% include header.html %}
+
+		<main>
+			<section id="explanation">
+				<h1>RSS feed</h1>
+				
+				<p>You are trying to view the quartersbrief RSS feed in your browser. An RSS feed is a file that is meant to be used by feed aggregators or other RSS syndication devices.</p>
+				<p>Enter the link that brought you here into your feed aggregator of choice to subscribe to the quartersbrief RSS feed.</p>
+			</section>
+			<a href="/">Go back to the main page</a>
+		</main>
+	</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
