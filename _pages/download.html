@@ -51,8 +51,9 @@ stylesheet: download.css
 	<p>Be the first to get new features by installing a pre-release version. These versions may still contain bugs or unfinished functionality.</p>
 	{% assign prereleases = site.github.releases | where: "prerelease", true 
 								| where_exp: "release", "release.tag_name > site.github.latest_release.tag_name" 
-								| sort: "tag_name" %}
-	{% for prerelease in prereleases reversed limit: 3 %}
+								| sort: "tag_name"
+								| reverse %}
+	{% for prerelease in prereleases limit: 3 %}
 		<article class="prerelease">
 			<div>
 				<h3 class="version">{{ prerelease.tag_name }}</h3>
