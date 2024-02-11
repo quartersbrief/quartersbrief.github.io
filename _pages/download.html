@@ -85,8 +85,12 @@ stylesheet: download.css
 						</a>
 					</article>
 				{% endfor %}
-			</div>
+			</div>	
 		</article>
+	{% else %}
+		<div class="nothing-new">
+			There are no pre-releases newer than the latest stable release.
+		</div>
 	{% endfor %}
 </section>
 
