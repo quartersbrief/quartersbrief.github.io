@@ -2,3 +2,5 @@
 _site/
 quartersbrief.github.io.sublime-workspace
 .jekyll-metadata
+vagrant.key
+vagrant.key.pub

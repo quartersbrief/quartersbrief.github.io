@@ -2,24 +2,43 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/jammy64"
-  # Expose port 4000 as the default port for jekyll
-  config.vm.network :forwarded_port, guest: 4000, host: 4000
+  USERNAME = "vagrant"
+  
+  config.vm.provider "docker" do |docker|
+    # Create ssh keys unless they are already created
+    %x(ssh-keygen -f #{USERNAME}.key -t ed25519 -N "") unless File.file?("#{USERNAME}.key")
 
-  config.vm.provider "virtualbox" do |vb|
-    # Give the vm more memory than the standard 1024 because we will be handling
-    # large amounts of data
-    # Processing GameParams.data will fail without this
-    vb.name = "quartersbrief.github.io"
+    docker.build_dir = "."
+    docker.build_args = [
+      # Make default user inside the VM have the same UID and GID as the user running the vagrant command
+      # This makes it a lot easier working with shared code locations, because the user will own the files
+      "--build-arg", "USERNAME=#{USERNAME}",
+      "--build-arg", "UID=#{Process.uid}",
+      "--build-arg", "GID=#{Process.gid}",
+      "--build-arg", "KEYFILE=#{USERNAME}.key.pub"
+    ]
+    docker.has_ssh = true
+    docker.remains_running = true
+    # Use project's directory name as name for the container.
+    # (Note that this will fail if such a container already exists.)
+    docker.name = File.dirname(__FILE__).split("/").last
+    # Use container name as hostname inside the container, as is the default behavior for other providers.
+    docker.create_args = ["--hostname", docker.name]
   end
+
+  config.ssh.username=USERNAME
+  config.ssh.private_key_path="#{USERNAME}.key"
 
   # Install jekyll, as per https://jekyllrb.com/docs/installation/ubuntu/
   # Except we do a per-machine install here, not a per-user one as suggested there.
   config.vm.provision "shell", name: "Install jekyll", inline: <<-SHELL
-    sudo apt-get install -y ruby-full build-essential zlib1g-dev
+    sudo apt-get update && sudo apt-get install -y ruby-full build-essential zlib1g-dev
 
     sudo gem install jekyll bundler
   SHELL
+
+  # Expose port 4000 as the default port for jekyll
+  config.vm.network :forwarded_port, guest: 4000, host: 4000
 
   GEM_HOME = "$HOME/gems"
   # Set the GEM_HOME environment variable to be set when logging into bash
