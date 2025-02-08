@@ -12,3 +12,13 @@ h1 {
 main > p:first-of-type {
 	font-weight: bold;
 }
+
+
+// Scale and center images if they appear alone
+main img:only-child {
+	max-width: min(30rem, 100%);		
+}
+
+main :has(img:only-child) {
+	text-align: center;
+}
